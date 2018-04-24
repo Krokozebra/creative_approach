@@ -1,0 +1,72 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script type="text/javascript" src="jquery.js"></script>
+  <link rel="stylesheet" href="css/mainstyle.css" type="text/css">
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+  <script type="text/javascript" src="bootstrap.js"></script>
+  <title>Redivraguvra</title>
+
+ <body>
+   <div class="header" id="picture"><a href="index.html"><img src="header.jpg"></a></div>
+   <div class="example-bs">
+   <div class="row justify-content-sm-center" id="btnpanel">
+     <div class="col col-sm-auto"><button class="btn btn-primary" id="btn1">Галерея</button></div>
+     <div class="col col-sm-auto"><button class="btn btn-primary" id="btn2">Услуги</button></div>
+     <div class="col col-sm-auto"><button class="btn btn-primary" id="btn3">Контакты</button></div>
+     <div class="col col-sm-auto"><button class="btn btn-primary span3" id="btn4">Отзывы</button></div>
+   </div>
+   </div>
+  <div id="content">
+   ТУТ ЧОТА БУДЕТ
+   <script>
+        $(document).ready(function(){
+
+            $('#btn1').click(function(){
+                $.ajax({
+                    url: "galery.html",
+                    cache: false,
+                    success: function(html){
+                        $("#content").html(html);
+                    }
+                });
+            });
+
+            $('#btn2').click(function(){
+                $.ajax({
+                    url: "services.html",
+                    cache: false,
+                    success: function(html){
+                        $("#content").html(html);
+                    }
+                });
+            });
+
+            $('#btn3').click(function(){
+                $.ajax({
+                    url: "contacts.html",
+                    cache: false,
+                    success: function(html){
+                        $("#content").html(html);
+                    }
+                });
+            });
+
+            $('#btn4').click(function(){
+                $.ajax({
+                    url: "reviews.html",
+                    cache: false,
+                    success: function(html){
+                        $("#content").html(html);
+                    }
+                });
+            });
+
+        });
+    </script>
+  </div>
+  <div id="footer">
+   футер
+  </div>
+ </body>
+</html>
